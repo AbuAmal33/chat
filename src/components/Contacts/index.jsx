@@ -1,10 +1,10 @@
-import React from 'react'
-import { loadContacts } from '../../redux/action'
-import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import Contact from './Contact'
+import React from "react";
+import { loadContacts } from "../../redux/action";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import Contact from "./Contact";
 
-function Contacts () {
+function Contacts() {
   const contacts = useSelector((state) => state.contacts.items);
   const loading = useSelector((state) => state.contacts.loadingContacts);
   const dispatch = useDispatch();
@@ -24,12 +24,12 @@ function Contacts () {
       ) : (
         <ul className="list-group">
           {contacts.map((contact) => {
-            return <Contact key={contact.id} contact={contact}/>;
+            return <Contact key={contact.id} contact={contact} />;
           })}
         </ul>
       )}
     </div>
-  )
+  );
 }
 
-export default Contacts
+export default Contacts;

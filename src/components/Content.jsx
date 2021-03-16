@@ -1,9 +1,9 @@
-import React from 'react'
-import Contacts from './Contacts'
-import Messages from './Messages'
-import Profile from './Profile'
+import React from "react";
+import Contacts from "./Contacts";
+import Messages from "./Messages";
+import Profile from "./Profile";
 
-function Content () {
+function Content() {
   return (
     <div className="container">
       <div className="row">
@@ -12,7 +12,7 @@ function Content () {
         <Profile />
       </div>
     </div>
-  )
+  );
 }
 
-export default Content
+export default Content;

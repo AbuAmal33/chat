@@ -1,21 +1,21 @@
 const initialState = {
   items: [],
-  filter: '',
-  loadingMessages: false
-}
+  filter: "",
+  loadingMessages: false,
+};
 
-const messagesReducer = (state = initialState, action ) => {
+const messagesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case 'load/messages/start':
+    case "load/messages/start":
       return {
         ...state,
-        loadingMessages: true
+        loadingMessages: true,
       };
-    case 'load/messages/success':
+    case "load/messages/success":
       return {
         ...state,
         items: action.payload,
-        loadingMessages: false
+        loadingMessages: false,
       };
     default:
       return state;
